@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link href="./src/output.css" rel="stylesheet">
+  <title>Linux Desktop Dashboard</title>
 </head>
 <body class="bg-gray-800 min-h-screen overflow-hidden">
   <!-- Grid background pattern  -->
@@ -13,97 +15,220 @@
 
   <div class="flex h-screen relative z-10">
     <!-- Left Sidebar -->
-    <div class="w-16 bg-gray-900 flex flex-col items-center py-6 space-y-4">
-      <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
+    <div class="w-16 bg-gray-900 flex flex-col items-center py-6 space-y-4 border-r border-gray-700">
+      <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-all duration-200 cursor-pointer shadow-lg">
+        <i class="fa-solid fa-rocket text-white"></i>
+      </div>
+      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+        <i class="fa-brands fa-firefox-browser text-blue-400"></i>
+      </div>
+      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+        <i class="fa-solid fa-folder-open text-yellow-400"></i>
+      </div>
+      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+        <i class="fa-solid fa-terminal text-green-400"></i>
+      </div>
+      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+        <i class="fa-brands fa-github text-gray-300"></i>
+      </div>
+      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+        <i class="fa-brands fa-spotify text-green-500"></i>
+      </div>
       <div class="flex-1"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-600 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
+      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+        <i class="fa-solid fa-camera text-purple-400"></i>
+      </div>
+      <div class="w-10 h-10 bg-gray-600 rounded-lg flex items-center justify-center hover:bg-gray-500 transition-all duration-200 cursor-pointer">
+        <i class="fa-solid fa-gears text-blue-300"></i>
+      </div>
+      <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center hover:bg-red-700 transition-all duration-200 cursor-pointer">
+        <i class="fa-solid fa-power-off text-white"></i>
+      </div>
     </div>
 
     <!-- Main Content -->
-    <div class=" flex-1 flex justify-center items-center p-0">
+    <div class="flex-1 flex justify-center items-center p-0">
       <div class="grid grid-cols-5 grid-rows-3 gap-6 w-[1100px] h-[650px]">
         <!-- Profile Card: col 1, rows 1-2 -->
-        <div class="row-span-2 col-span-1 bg-gray-900 rounded-2xl flex flex-col items-center justify-center p-6 shadow-lg">
-          <div class="w-28 h-28 rounded-full bg-gray-700 mb-4"></div>
-          <div class="text-xl font-bold text-blue-200 mb-1">AestheticArch</div>
-          <div class="text-md text-blue-100 mb-2">rxyhn</div>
-        </div>
-
-
-        <!-- Widget 1: col 2, row 1 -->
-        <div class="col-span-1 row-span-1 bg-gray-900 rounded-2xl flex items-center justify-center shadow-lg">
-          <div class="w-24 h-24 bg-gray-800 rounded-2xl"></div>
-        </div>
-        <!-- Widget 2: col 3, row 1 -->
-        <div class="col-span-1 row-span-1 bg-gray-900 rounded-2xl flex items-center justify-center shadow-lg">
-          <div class="w-24 h-24 bg-gray-800 rounded-2xl"></div>
-        </div>
-
-
-        <!-- Music Player: col 4-5, rows 1-2 -->
-        <div class="row-span-2 col-span-2 bg-gray-900 rounded-2xl flex flex-col items-center justify-center p-6 shadow-lg">
-          <div class="w-24 h-24 bg-gray-700 rounded-xl mb-4"></div>
-          <div class="text-lg text-blue-200 font-bold mb-1">Offline</div>
-          <div class="text-sm text-blue-100 mb-2">Nothing Playing</div>
-          <div class="flex items-center gap-2 mt-2">
-            <button class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center"></button>
-            <button class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center"></button>
-            <button class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center"></button>
+        <div class="row-span-2 col-span-1 bg-gray-900 rounded-2xl flex flex-col items-center justify-center p-6 shadow-lg border border-gray-700 hover:border-gray-600 transition-all duration-300">
+          <div class="w-28 h-28 rounded-full bg-gray-700 mb-4 flex items-center justify-center overflow-hidden border-4 border-blue-400 shadow-lg hover:border-blue-300 transition-all duration-300">
+            <img src="assets/rakun.jpg" alt="Profile Picture" class="w-full h-full object-cover rounded-full">
+          </div>
+          <div class="text-2xl font-extrabold text-blue-300 mb-1 tracking-wide">Balaji Bandgar</div>
+          <div class="text-sm text-blue-200 mb-4 text-center italic">Fullstack Web Developer</div>
+          <div class="flex items-center gap-3 mt-6">
+            <a href="https://github.com/" target="_blank" class="text-blue-400 hover:text-blue-300 transition-all duration-200 hover:scale-110">
+              <i class="fa-brands fa-github fa-lg"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="text-blue-400 hover:text-blue-300 transition-all duration-200 hover:scale-110">
+              <i class="fa-brands fa-twitter fa-lg"></i>
+            </a>
+            <a href="mailto:your@email.com" class="text-blue-400 hover:text-blue-300 transition-all duration-200 hover:scale-110">
+              <i class="fa-solid fa-envelope fa-lg"></i>
+            </a>
           </div>
         </div>
 
-
-        <!-- Widget 3: col 2, row 2 -->
-        <div class="col-span-1 row-span-1 bg-gray-900 rounded-2xl flex items-center justify-center shadow-lg">
-          <div class="w-24 h-24 bg-gray-800 rounded-2xl"></div>
+        <!-- CPU Usage Widget: col 2, row 1 -->
+        <div class="col-span-1 row-span-1 bg-gray-900 rounded-2xl flex flex-col items-center justify-center p-4 shadow-lg border border-gray-700 hover:border-gray-600 transition-all duration-300">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex flex-col items-center justify-center mb-2 shadow-lg">
+            <i class="fa-solid fa-microchip text-white text-xl mb-1"></i>
+            <span class="text-white text-xs font-bold">CPU</span>
+          </div>
+          <div class="text-blue-200 text-lg font-bold" id="cpu-usage">47%</div>
+          <div class="w-full bg-gray-700 rounded-full h-2 mt-2">
+            <div class="bg-blue-500 h-2 rounded-full transition-all duration-500" style="width: 47%" id="cpu-bar"></div>
+          </div>
         </div>
-        <!-- Widget 4: col 3, row 2 -->
-        <div class="col-span-1 row-span-1 bg-gray-900 rounded-2xl flex items-center justify-center shadow-lg">
-          <div class="w-24 h-24 bg-gray-800 rounded-2xl"></div>
+
+        <!-- Memory Usage Widget: col 3, row 1 -->
+        <div class="col-span-1 row-span-1 bg-gray-900 rounded-2xl flex flex-col items-center justify-center p-4 shadow-lg border border-gray-700 hover:border-gray-600 transition-all duration-300">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex flex-col items-center justify-center mb-2 shadow-lg">
+            <i class="fa-solid fa-memory text-white text-xl mb-1"></i>
+            <span class="text-white text-xs font-bold">RAM</span>
+          </div>
+          <div class="text-green-200 text-lg font-bold" id="memory-usage">68%</div>
+          <div class="w-full bg-gray-700 rounded-full h-2 mt-2">
+            <div class="bg-green-500 h-2 rounded-full transition-all duration-500" style="width: 68%" id="memory-bar"></div>
+          </div>
+        </div>
+
+        <!-- Music Player: col 4-5, rows 1-2 -->
+        <div class="row-span-2 col-span-2 bg-gray-900 rounded-2xl flex flex-col items-center justify-center p-6 shadow-lg border border-gray-700 hover:border-gray-600 transition-all duration-300">
+          <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl mb-4 flex items-center justify-center shadow-lg">
+            <i class="fa-solid fa-music text-white text-3xl"></i>
+          </div>
+          <div class="text-lg text-blue-200 font-bold mb-1">Now Playing</div>
+          <div class="text-sm text-blue-100 mb-2 text-center">Bohemian Rhapsody - Queen</div>
+          <div class="flex items-center gap-3 mt-4">
+            <button class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-all duration-200">
+              <i class="fa-solid fa-backward text-blue-300"></i>
+            </button>
+            <button class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-200">
+              <i class="fa-solid fa-pause text-white"></i>
+            </button>
+            <button class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-all duration-200">
+              <i class="fa-solid fa-forward text-blue-300"></i>
+            </button>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-1 mt-4">
+            <div class="bg-blue-500 h-1 rounded-full" style="width: 35%"></div>
+          </div>
+        </div>
+
+        <!-- Network Widget: col 2, row 2 -->
+        <div class="col-span-1 row-span-1 bg-gray-900 rounded-2xl flex flex-col items-center justify-center p-4 shadow-lg border border-gray-700 hover:border-gray-600 transition-all duration-300">
+          <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex flex-col items-center justify-center mb-2 shadow-lg">
+            <i class="fa-solid fa-wifi text-white text-xl mb-1"></i>
+            <span class="text-white text-xs font-bold">NET</span>
+          </div>
+          <div class="text-cyan-200 text-lg font-bold">Connected</div>
+          <div class="text-cyan-100 text-xs mt-1">192.168.1.100</div>
+        </div>
+
+        <!-- Disk Usage Widget: col 3, row 2 -->
+        <div class="col-span-1 row-span-1 bg-gray-900 rounded-2xl flex flex-col items-center justify-center p-4 shadow-lg border border-gray-700 hover:border-gray-600 transition-all duration-300">
+          <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex flex-col items-center justify-center mb-2 shadow-lg">
+            <i class="fa-solid fa-hard-drive text-white text-xl mb-1"></i>
+            <span class="text-white text-xs font-bold">DISK</span>
+          </div>
+          <div class="text-orange-200 text-lg font-bold" id="disk-usage">72%</div>
+          <div class="w-full bg-gray-700 rounded-full h-2 mt-2">
+            <div class="bg-orange-500 h-2 rounded-full transition-all duration-500" style="width: 72%" id="disk-bar"></div>
+          </div>
         </div>
 
         <!-- Quote Card: col 1-2, row 3 -->
-        <div class="col-span-2 row-span-1 bg-gray-900 rounded-2xl flex flex-col justify-center items-center p-6 shadow-lg">
-          <div class="text-blue-100 text-center">"It is through science that we prove, but through intuition that we discover."<br><span class="block mt-2">~ Henri Poincaré ~</span></div>
+        <div class="col-span-2 row-span-1 bg-gray-900 rounded-2xl flex flex-col justify-center items-center p-6 shadow-lg border border-gray-700 hover:border-gray-600 transition-all duration-300">
+          <div class="text-blue-100 text-center text-lg italic">"It is through science that we prove, but through intuition that we discover."</div>
+          <div class="text-blue-300 text-sm mt-3 font-semibold">~ Henri Poincaré ~</div>
         </div>
 
         <!-- Weather Card: col 3, row 3 -->
-        <div class="col-span-1 row-span-1 bg-gray-900 rounded-2xl flex flex-col justify-center items-center p-6 shadow-lg">
+        <div class="col-span-1 row-span-1 bg-gray-900 rounded-2xl flex flex-col justify-center items-center p-6 shadow-lg border border-gray-700 hover:border-gray-600 transition-all duration-300">
+          <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-3 shadow-lg">
+            <i class="fa-solid fa-sun text-white text-2xl"></i>
+          </div>
           <div class="text-blue-200 text-lg font-bold mb-1">Thursday</div>
-          <div class="text-blue-100 mb-2">Moderate Rain</div>
+          <div class="text-blue-100 mb-2">Sunny</div>
           <div class="text-blue-100 text-sm">22°C in Bandung, ID</div>
         </div>
         
         <!-- System Info Card: col 4-5, row 3 -->
-        <div class="col-span-2 row-span-1 bg-gray-900 rounded-2xl flex flex-col justify-center items-center p-6 shadow-lg">
-          <div class="text-blue-200 font-bold mb-1">Next: <span class="italic">Sleep in 01h 32min</span></div>
-          <div class="text-blue-100 text-xs mt-2">0 high priority, 1 total</div>
-          <div class="text-blue-100 text-xs">2h 17m uptime</div>
-          <div class="text-blue-100 text-xs">978kb / 3370kb used</div>
-          <div class="text-blue-100 text-xs">116 / 1766 free</div>
+        <div class="col-span-2 row-span-1 bg-gray-900 rounded-2xl flex flex-col justify-center items-center p-6 shadow-lg border border-gray-700 hover:border-gray-600 transition-all duration-300">
+          <div class="text-blue-200 font-bold mb-3 text-lg">System Status</div>
+          <div class="w-full space-y-2">
+            <div class="flex justify-between items-center">
+              <span class="text-blue-100 text-sm">Uptime:</span>
+              <span class="text-blue-300 text-sm font-mono" id="uptime">2h 17m</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-blue-100 text-sm">Tasks:</span>
+              <span class="text-blue-300 text-sm font-mono">0 high, 1 total</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-blue-100 text-sm">Memory:</span>
+              <span class="text-blue-300 text-sm font-mono">978MB / 3370MB</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-blue-100 text-sm">Disk:</span>
+              <span class="text-blue-300 text-sm font-mono">116GB / 1766GB free</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Right Sidebar -->
-    <div class="w-16 bg-gray-900 flex flex-col items-center justify-between py-6 space-y-4 h-[650px] ml-4 rounded">
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
-      <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors"></div>
+      <div class="w-16 bg-gray-900 flex flex-col items-center justify-between py-6 space-y-4 h-[650px] ml-4 rounded border border-gray-700">
+        <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+          <i class="fa-solid fa-clock text-blue-300"></i>
+        </div>
+        <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+          <i class="fa-solid fa-chart-line text-green-300"></i>
+        </div>
+        <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+          <i class="fa-solid fa-bell text-yellow-300"></i>
+        </div>
+        <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+          <i class="fa-solid fa-calendar text-purple-300"></i>
+        </div>
+        <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+          <i class="fa-solid fa-download text-cyan-300"></i>
+        </div>
+        <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+          <i class="fa-solid fa-cog text-gray-300"></i>
+        </div>
+        <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-all duration-200 cursor-pointer">
+          <i class="fa-solid fa-question text-red-300"></i>
+        </div>
+      </div>
     </div>
-    </div>
-
-    
   </div>
+
+  <script>
+    // Simulate real-time system monitoring
+    function updateSystemStats() {
+      // Simulate CPU usage changes
+      const cpuUsage = Math.floor(Math.random() * 30) + 30; // 30-60%
+      document.getElementById('cpu-usage').textContent = cpuUsage + '%';
+      document.getElementById('cpu-bar').style.width = cpuUsage + '%';
+      
+      // Simulate memory usage changes
+      const memoryUsage = Math.floor(Math.random() * 20) + 60; // 60-80%
+      document.getElementById('memory-usage').textContent = memoryUsage + '%';
+      document.getElementById('memory-bar').style.width = memoryUsage + '%';
+      
+      // Simulate disk usage changes
+      const diskUsage = Math.floor(Math.random() * 10) + 70; // 70-80%
+      document.getElementById('disk-usage').textContent = diskUsage + '%';
+      document.getElementById('disk-bar').style.width = diskUsage + '%';
+    }
+
+    // Update stats every 3 seconds
+    setInterval(updateSystemStats, 3000);
+    
+    // Initial update
+    updateSystemStats();
+  </script>
 </body>
-</html> 
+</html>
